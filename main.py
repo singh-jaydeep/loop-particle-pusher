@@ -8,8 +8,12 @@ import fns
 import sys
 
 
-############################# User input: "RUN" option to run new simulation, "DATA" to execute data analysis code
-#############################             "TESTING" to execute any testing code. If no option, same as "RUN"
+############################# 
+# User input: "RUN" option to run new simulation,
+# "DATA" to execute data analysis code,
+# "TESTING" to execute any testing code. 
+# If no option, same as "RUN"
+#############################            
 n = len(sys.argv)
 TESTING = 0
 if n != 1:
@@ -40,9 +44,9 @@ if RUN_SIMUL == 1:
 
 if ANALYZE == 1:
     data_array = adata.read_data()
-    # adata.summary_stats(data_array)
+    adata.summary_stats(data_array)
     adata.loop_visualization(data_array)
-    # adata.harmonic_visualization(data_array)
+    adata.harmonic_visualization(data_array)
     adata.slowmanifold_visualization(data_array)
 
 if (
